@@ -9,6 +9,19 @@ $(document).ready(function() {
 
       // if (age >=50 && gender === "Female" && orientation === "Straight" || gender === "Male" && orientation === "Gay") {
       //   $('#container-result1').show();
+      //   }
+      //   if(age >=50 && gender === "Female" && orientation === "Gay" || gender === "Male" && orientation === "Straight") {
+      //     $('#container-result2').show();
+      //     }
+      // if (age <50 && gender === "Female" && orientation === "Straight" || gender === "Male" && orientation === "Gay") {
+      //   $('#container-result3').show();
+      //   }
+      //   if(age <50 && gender === "Female" && orientation === "Gay" || gender === "Male" && orientation === "Straight") {
+      //     $('#container-result4').show();
+        // }
+      // }
+
+
       // }
 
       if (age >= 50){
@@ -20,55 +33,36 @@ $(document).ready(function() {
             $('#container-result1').show();
           }
         }
-        else {}
+        else {
+          if (orientation === "Straight"){
+            $('#container-result1').show();
+          }
+          else {
+            $('#container-result2').show();
+          }
+        }
       }
-      else {}
+      else {
+        if (gender === "Female"){
+            if (orientation === "Straight"){
+              $('#container-result3').show();
+            }
+            else{
+              $('#container-result4').show();
+            }
+        }
+        else{
+          if (orientation === "Straight") {
+            $('#container-result4').show();
+          }
+          else {
+            $('#container-result3').show();
+          }
+        }
+      }
 
     event.preventDefault();
   });
 });
 
-  //     $('.name1').text(name1Input);
-  //     $('.address1').text(address1Input);
-  //     $('.city1').text(city1Input);
-  //     $('.state1').text(state1Input);
-  //     $('.zipcode1').text(zipcode1Input);
-  //
-  //     $('.story').show();
-  //
-  //     event.preventDefault();
-  //
-  //   });
-  // });
-
-
-
-//   var age = parseInt(prompt("How old are you?"));
-//
-//   if (age >= 18) {
-//     $('#adultcontent').show();
-//   } else {
-//     $('#under-18').show();
-//   }
-// });
-
-
-// $(document).ready(function() {
-//   var age = parseInt(prompt("What is your age?"));
-//
-// });
-// //   var animal = prompt("What is your favorite animal?");
-//
-//   if (animal === "turtle") {
-//     $('#turtle').show();
-//   } else if (animal === "bird") {
-//     $('#bird').show();
-//   }
-//     else if (animal === "snake") {
-//     $('#snake').show();
-//   }
-// else {
-// alert("Sorry this is currently not an option, please try again");
-// var animal = prompt("What is your favorite animal?");
-// }
-// });
+  
