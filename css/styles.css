@@ -4,3 +4,10 @@
 .container-jumbotron {
   margin-top: 28px;
 }
+
+
+body {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/7/76/Coast_Garter_Snake.jpg");
+  background-size: cover;
+
+}
